@@ -103,9 +103,10 @@ int renderer() {
     
     for (int i = 0; i < numCircles; i++) {
         CircleData circle;
-        circle.x = static_cast<float>(rand() % WINDOW_WIDTH);
-        circle.y = static_cast<float>(rand() % WINDOW_HEIGHT);
-        circle.radius = static_cast<float>(rand() % 5 + 1);
+        CircleCoord circleCoord; // Create an instance of CircleCoor
+        circle.x = static_cast<float>(circleCoord.x);
+        circle.y = static_cast<float>(circleCoord.y);
+        circle.radius = static_cast<float>(circleCoord.r);
         circles.push_back(circle);
     }
     
@@ -266,6 +267,7 @@ int renderer() {
                 // Convert screen coordinates to normalized device coordinates (-1 to 1)
                 float normalizedX = (circles[i].x / static_cast<float>(WINDOW_WIDTH)) * 2.0f - 1.0f;
                 float normalizedY = (circles[i].y / static_cast<float>(WINDOW_HEIGHT)) * 2.0f - 1.0f;
+                
                 // Flip Y coordinate since screen coordinates have Y pointing down
                 normalizedY = -normalizedY;
                 

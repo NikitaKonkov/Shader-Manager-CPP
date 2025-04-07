@@ -47,6 +47,13 @@ float colorValues[] = {
 // Number of circles to draw
 const int numCircles = 100;
 
+// Circle structure
+struct CircleCoord {
+    float x = rand() % WINDOW_WIDTH;      // X position
+    float y = rand() % WINDOW_HEIGHT;     // Y position
+    float r = rand() % 50 + 10;      // Radius
+};
+
 // Automatic reload settings
 bool autoReloadEnabled = false;
 Uint32 lastReloadTime = 0;
