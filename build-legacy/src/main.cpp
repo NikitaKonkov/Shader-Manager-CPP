@@ -1,7 +1,7 @@
-#include "../include/shader_manager.h"
+#include "../include/renderer.h"
 
 
 int main(int argc, char* argv[]) {
-    drawer(); // Call the drawer function
+    renderer(); // Call the drawer function
     return 0;
 }
