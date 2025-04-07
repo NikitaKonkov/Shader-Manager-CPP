@@ -9,5 +9,8 @@
 #include <string>
 #include <fstream>
 #include <sstream>
+#include <vector>
+#include <cstdlib>
+#include <ctime>
 
 #endif // GL_INCLUDES_H

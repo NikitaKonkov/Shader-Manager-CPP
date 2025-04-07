@@ -26,7 +26,6 @@ float vertices[] = {
     -1.0f, -1.0f, 0.0f, 0.0f, 0.0f   // bottom left
 };
 
-
 // indices are used to draw the two triangles that make up the quad
 unsigned int indices[] = {
     0, 1, 2,  // first triangle
@@ -35,19 +34,22 @@ unsigned int indices[] = {
 
 // Set the colors (for example, pink and blue)
 float colorValues[] = {
-    1.0f, 0.0f, 1.0f,  // Pink   (colors[0])
-    0.0f, 0.0f, 1.0f,  // Blue   (colors[1])
-    0.0f, 1.0f, 1.0f,  // Cyan   (colors[2])
-    1.0f, 1.0f, 0.0f,  // *   (colors[3])
-    1.0f, 0.0f, 1.0f,  // *   (colors[4])
-    0.0f, 1.0f, 1.0f   // *   (colors[5])
+    0.0f, 0.0f, 1.0f,  // blue
+    0.0f, 1.0f, 0.0f,  // green
+    0.0f, 1.0f, 1.0f,  // cyan
+    1.0f, 0.0f, 0.0f,  // red
+    1.0f, 0.0f, 1.0f,  // magenta
+    1.0f, 1.0f, 0.0f,  // yellow
+    1.0f, 1.0f, 1.0f,  // white
+    0.0f, 0.0f, 0.0f   // black
 };
+
+// Number of circles to draw
+const int numCircles = 100;
 
 // Automatic reload settings
 bool autoReloadEnabled = false;
 Uint32 lastReloadTime = 0;
 const Uint32 RELOAD_INTERVAL = 1000; // Reload every 1 second when auto-reload is enabled
-
-
 
 #endif // DATA_H
