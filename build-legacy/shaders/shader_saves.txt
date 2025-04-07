@@ -1,0 +1,16 @@
+############################################################################################## BLACKHOLE
+precision mediump float;
+varying vec2 pos;
+uniform sampler2D background;
+uniform float millis; 
+uniform float random; // random number between 0 and 1
+
+void main() {
+    pos.x = cos(pos.x * pos.y * 5)* tan(10); // move the texture in the x direction
+    pos.y = tan(pos.y * pos.x * 5)* 1; // move the texture in the y direction
+    pos.x = (pos.x + millis / 10000); // move the texture in the x direction
+    vec4 col = fract(texture2D(background, pos))* pos.y; // get the color from the texture
+    col.b = 0;
+    col.g = col.g / 4; // make the green channel depend on the x position
+    gl_FragColor = col;
+}

@@ -1,0 +1,3 @@
+build-shadertoy/src/shadertoy_renderer.exe
+build-legacy/legacy_shader.exe
+build-legacy/texture/*.png
