@@ -49,10 +49,16 @@ const int numCircles = 100;
 
 // Circle structure
 struct CircleCoord {
-    float x = rand() % WINDOW_WIDTH;      // X position
-    float y = rand() % WINDOW_HEIGHT;     // Y position
-    float r = rand() % 50 + 10;      // Radius
+    float x = std::rand() % WINDOW_WIDTH;      // X position
+    float y = std::rand() % WINDOW_HEIGHT;     // Y position
+    float r = std::rand() % 50 + 10;           // R Radius
 };
+
+// Mouse click tracking
+bool mouseClicked = false;
+float clickX = 0.5f;
+float clickY = 0.5f;
+float clickTime = 0.0f;
 
 // Automatic reload settings
 bool autoReloadEnabled = false;

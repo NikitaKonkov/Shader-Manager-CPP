@@ -12,5 +12,6 @@
 #include <vector>
 #include <cstdlib>
 #include <ctime>
+#include <cmath>
 
 #endif // GL_INCLUDES_H
