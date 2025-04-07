@@ -5,6 +5,7 @@
 
 int renderer() {
     
+    // Initialize random seed
     srand(static_cast<unsigned int>(time(nullptr)));
 
     // Initialize SDL
@@ -71,7 +72,8 @@ int renderer() {
         SDL_Quit();
         return 1;
     }
-    // Add this to your render loop
+    
+    // Get the location of the colors uniform
     GLint colorsLocation = glGetUniformLocation(shaderProgram, "colors");
 
     // In your render loop, before drawing

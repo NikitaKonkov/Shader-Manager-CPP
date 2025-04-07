@@ -1,7 +1,6 @@
 #ifndef DATA_H
 #define DATA_H
 
-#include "includes.h"
 #include "utils.h"
 
 // Window dimensions - changed to variables instead of constants
@@ -27,6 +26,8 @@ float vertices[] = {
     -1.0f, -1.0f, 0.0f, 0.0f, 0.0f   // bottom left
 };
 
+
+// indices are used to draw the two triangles that make up the quad
 unsigned int indices[] = {
     0, 1, 2,  // first triangle
     0, 2, 3   // second triangle
@@ -34,8 +35,12 @@ unsigned int indices[] = {
 
 // Set the colors (for example, pink and blue)
 float colorValues[] = {
-    1.0f, 0.0f, 1.0f,  // Pink (colors[0])
-    0.0f, 0.0f, 1.0f   // Blue (colors[1])
+    1.0f, 0.0f, 1.0f,  // Pink   (colors[0])
+    0.0f, 0.0f, 1.0f,  // Blue   (colors[1])
+    0.0f, 1.0f, 1.0f,  // Cyan   (colors[2])
+    1.0f, 1.0f, 0.0f,  // *   (colors[3])
+    1.0f, 0.0f, 1.0f,  // *   (colors[4])
+    0.0f, 1.0f, 1.0f   // *   (colors[5])
 };
 
 // Automatic reload settings
